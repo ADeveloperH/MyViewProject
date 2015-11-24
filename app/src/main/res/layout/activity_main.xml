@@ -10,4 +10,10 @@
         android:layout_marginTop="10dp"
         android:layout_height="wrap_content"
         android:text="优酷菜单演示" />
+    <Button
+        android:id="@+id/btn_myviewpager"
+        android:layout_width="fill_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:text="ViewPager演示" />
 </LinearLayout>
