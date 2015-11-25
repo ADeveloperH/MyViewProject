@@ -8,6 +8,7 @@ import android.widget.Button;
 
 import project.hjking.cn.myview.mydrawview.MyDrawViewAcitivity;
 import project.hjking.cn.myview.mypoupwindow.MyPopWindowActivity;
+import project.hjking.cn.myview.myringview.MyRingViewActivity;
 import project.hjking.cn.myview.mytogglebtn.MyToggleBtnActivity;
 import project.hjking.cn.myview.myviewpager.MyViewPagerActivity;
 import project.hjking.cn.myview.youkumenu.MyYouKuView;
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btnPoupWindow;
     private Button btnMyDrawView;
     private Button btnMyToggleBtn;
+    private Button btnMyRingView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +37,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnPoupWindow = (Button) findViewById(R.id.btn_mypoupwindow);
         btnMyDrawView = (Button) findViewById(R.id.btn_mydrawview);
         btnMyToggleBtn = (Button) findViewById(R.id.btn_mytogglebtn);
+        btnMyRingView = (Button) findViewById(R.id.btn_myringview);
     }
 
     private void setListener() {
@@ -43,6 +46,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnPoupWindow.setOnClickListener(this);
         btnMyDrawView.setOnClickListener(this);
         btnMyToggleBtn.setOnClickListener(this);
+        btnMyRingView.setOnClickListener(this);
     }
 
     @Override
@@ -62,6 +66,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_mytogglebtn:
                 startActivity(new Intent(this, MyToggleBtnActivity.class));
+                break;
+            case R.id.btn_myringview:
+                startActivity(new Intent(this, MyRingViewActivity.class));
                 break;
         }
     }

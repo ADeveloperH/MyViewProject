@@ -37,6 +37,10 @@
             android:name=".mytogglebtn.MyToggleBtnActivity"
             android:launchMode="singleTop"
             android:screenOrientation="userPortrait" />
+        <activity
+            android:name=".myringview.MyRingViewActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="userPortrait" />
     </application>
 
 </manifest>
