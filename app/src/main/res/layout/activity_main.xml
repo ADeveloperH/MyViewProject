@@ -22,5 +22,11 @@
         android:layout_marginTop="10dp"
         android:layout_height="wrap_content"
         android:text="PoupWindow演示" />
+  <Button
+        android:id="@+id/btn_mydrawview"
+        android:layout_width="fill_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:text="自定义View基本使用演示" />
 
 </LinearLayout>
