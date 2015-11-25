@@ -9,7 +9,8 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name">
+            android:label="@string/app_name"
+            android:screenOrientation="userPortrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,16 +19,24 @@
         </activity>
         <activity
             android:name=".youkumenu.MyYouKuView"
-            android:launchMode="singleTop" />
+            android:launchMode="singleTop"
+            android:screenOrientation="userPortrait" />
         <activity
             android:name=".myviewpager.MyViewPagerActivity"
-            android:launchMode="singleTop" />
+            android:launchMode="singleTop"
+            android:screenOrientation="userPortrait" />
         <activity
             android:name=".mypoupwindow.MyPopWindowActivity"
-            android:launchMode="singleTop" />
+            android:launchMode="singleTop"
+            android:screenOrientation="userPortrait" />
         <activity
             android:name=".mydrawview.MyDrawViewAcitivity"
-            android:launchMode="singleTop" />
+            android:launchMode="singleTop"
+            android:screenOrientation="userPortrait" />
+        <activity
+            android:name=".mytogglebtn.MyToggleBtnActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="userPortrait" />
     </application>
 
 </manifest>
