@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import project.hjking.cn.myview.mypoupwindow.MyPopWindowActivity;
 import project.hjking.cn.myview.myviewpager.MyViewPagerActivity;
 import project.hjking.cn.myview.youkumenu.MyYouKuView;
 
@@ -13,6 +14,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private Button btnMyYouKu;
     private Button btnMyViewPager;
+    private Button btnPoupWindow;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,11 +28,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void initView() {
         btnMyYouKu = (Button) findViewById(R.id.btn_myyouku);
         btnMyViewPager = (Button) findViewById(R.id.btn_myviewpager);
+        btnPoupWindow = (Button) findViewById(R.id.btn_mypoupwindow);
     }
 
     private void setListener() {
         btnMyYouKu.setOnClickListener(this);
         btnMyViewPager.setOnClickListener(this);
+        btnPoupWindow.setOnClickListener(this);
     }
 
     @Override
@@ -41,6 +45,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_myviewpager:
                 startActivity(new Intent(this, MyViewPagerActivity.class));
+                break;
+            case R.id.btn_mypoupwindow:
+                startActivity(new Intent(this, MyPopWindowActivity.class));
                 break;
         }
     }
