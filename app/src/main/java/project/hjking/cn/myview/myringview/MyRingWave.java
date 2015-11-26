@@ -84,13 +84,12 @@ public class MyRingWave extends View {
      */
     private void flushData() {
         for (int i = 0; i < waveList.size(); i++) {
-
             Wave w = waveList.get(i);
-
             //如果透明度为 0 从集合中删除
             int alpha = w.paint.getAlpha();
             if(alpha == 0){
-                waveList.remove(i);	//删除i 以后，i的值应该再减1 否则会漏掉一个对象，不过，在此处影响不大，效果上看不出来。
+                //删除i 以后，i的值应该再减1 否则会漏掉一个对象，不过，在此处影响不大，效果上看不出来。
+                waveList.remove(i);
                 continue;
             }
             alpha-=5;
@@ -99,13 +98,11 @@ public class MyRingWave extends View {
             }
             //降低透明度
             w.paint.setAlpha(alpha);
-
             //扩大半径
             w.radius = w.radius+3;
             //设置半径厚度
             w.paint.setStrokeWidth(w.radius/3);
         }
-
 		/*
 		 * 如果集合被清空，就停止刷新动画
 		 */
@@ -127,6 +124,7 @@ public class MyRingWave extends View {
             handler.sendEmptyMessage(88);
         } else {
             Wave w = waveList.get(waveList.size()-1);
+            //当前触摸点和上一个触摸点的距离大于一定的范围才视当前的触摸点为有效
             if(Math.abs(w.x - x)>MIN_DIS || Math.abs(w.y-y)>MIN_DIS){
                 addPoint2List(x,y);
             }

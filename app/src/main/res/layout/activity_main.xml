@@ -40,5 +40,11 @@
         android:layout_marginTop="10dp"
         android:layout_height="wrap_content"
         android:text="自定义水波纹演示" />
+    <Button
+        android:id="@+id/btn_myviewtest"
+        android:layout_width="fill_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:text="自己写的一个画画演示" />
 
 </LinearLayout>

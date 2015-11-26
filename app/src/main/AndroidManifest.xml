@@ -41,6 +41,11 @@
             android:name=".myringview.MyRingViewActivity"
             android:launchMode="singleTop"
             android:screenOrientation="userPortrait" />
+
+        <activity
+            android:name=".myviewtest.MyViewTestActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="userPortrait" />
     </application>
 
 </manifest>
