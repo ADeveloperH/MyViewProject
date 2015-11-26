@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import project.hjking.cn.myview.heikestyleview.HeiKeViewActivity;
 import project.hjking.cn.myview.mydrawview.MyDrawViewAcitivity;
 import project.hjking.cn.myview.mypoupwindow.MyPopWindowActivity;
 import project.hjking.cn.myview.myringview.MyRingViewActivity;
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btnMyToggleBtn;
     private Button btnMyRingView;
     private Button btnMyViewTest;
+    private Button btnHeiKeView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +43,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnMyToggleBtn = (Button) findViewById(R.id.btn_mytogglebtn);
         btnMyRingView = (Button) findViewById(R.id.btn_myringview);
         btnMyViewTest = (Button) findViewById(R.id.btn_myviewtest);
+        btnHeiKeView = (Button) findViewById(R.id.btn_heikeview);
     }
 
     private void setListener() {
@@ -51,6 +54,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnMyToggleBtn.setOnClickListener(this);
         btnMyRingView.setOnClickListener(this);
         btnMyViewTest.setOnClickListener(this);
+        btnHeiKeView.setOnClickListener(this);
     }
 
     @Override
@@ -76,6 +80,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_myviewtest:
                 startActivity(new Intent(this, MyViewTestActivity.class));
+                break;
+            case R.id.btn_heikeview:
+                startActivity(new Intent(this, HeiKeViewActivity.class));
                 break;
         }
     }
