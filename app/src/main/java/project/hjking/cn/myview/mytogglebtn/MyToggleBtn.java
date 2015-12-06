@@ -1,10 +1,12 @@
 package project.hjking.cn.myview.mytogglebtn;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Paint;
+import android.graphics.drawable.BitmapDrawable;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
@@ -37,6 +39,21 @@ public class MyToggleBtn extends View implements View.OnClickListener {
      */
     public MyToggleBtn(Context context, AttributeSet attrs) {
         super(context, attrs);
+       /*
+        //可以遍历获取自定义控件的所有属性
+       //获得属性的个数
+        int count = attrs.getAttributeCount();
+        for (int i = 0; i < count; i++) {
+            String attrName = attrs.getAttributeName(i);
+            String attrValue = attrs.getAttributeValue(i);
+        }*/
+
+        TypedArray typedArray = context.obtainStyledAttributes(attrs,R.styleable.MyToggleBtn);
+        //获取背景资源
+        BitmapDrawable bgDrawable = (BitmapDrawable) typedArray.getDrawable(R.styleable.MyToggleBtn_bg_bitmap);
+        bgBitmap = bgDrawable.getBitmap();
+        BitmapDrawable slidDrawable = (BitmapDrawable) typedArray.getDrawable(R.styleable.MyToggleBtn_slide_bitmap);
+        slidBitmap = slidDrawable.getBitmap();
         init();
     }
 

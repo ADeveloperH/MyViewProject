@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 声明一个属性集合，名称一般和拥有这些属性的类同名 -->
+    <declare-styleable name="MyToggleBtn" >
+        <!-- 声明背景属性，格式是引用类型 -->
+        <attr name="bg_bitmap" format="reference" />
+        <!-- 声明滑动图片属性，格式是引用类型 -->
+        <attr name="slide_bitmap" format="reference" />
+    </declare-styleable>
+</resources>
